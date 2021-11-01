@@ -1,7 +1,7 @@
 import app from "./server";
 import dbConnection from "./models/persistence/dbConnection";
 ACTIVE_PERSISTENCE = 4;
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 const db = new dbConnection(process.env.ACTIVE_PERSISTENCE);
 
 app.listen(PORT, () => {

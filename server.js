@@ -5,11 +5,6 @@ import productosRouter from "./routes/productos.routes.js";
 const app = Express();
 
 app.use(Express.json());
-const PORT = 8080;
-
-app.listen(PORT, () => {
-  console.log(`Escuchando el puerto ${PORT}`);
-});
 
 app.get("/", (req, res) => {
   res.json({ message: "Hola Root" });
