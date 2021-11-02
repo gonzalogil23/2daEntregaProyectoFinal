@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import { Carrito } from "./schemas/carrito";
-import { Productos } from "./schemas/productos";
+import { Carrito } from "./schemas/carrito.js";
+import { Productos } from "./schemas/productos.js";
 
 export default function Mongo(URI, options) {
   this.connection = mongoose;

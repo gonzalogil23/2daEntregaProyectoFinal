@@ -1,6 +1,6 @@
 import { Carrito } from "../models/classModels/Carrito.js";
 // import fs from "fs";
-import db from "../app.js";
+import db from "../server.js";
 
 const chart = new Carrito();
 

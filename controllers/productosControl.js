@@ -1,5 +1,5 @@
 import { Producto } from "../models/classModels/Productos.js";
-import db from "../app.js";
+import db from "../server.js";
 let admin = true;
 
 export const getProducts = async (req, res) => {
@@ -60,7 +60,7 @@ export const updateProduct = async (req, res, next) => {
   }
 };
 
-export const deleteProduct = (req, res) => {
+export const deleteProduct = async (req, res) => {
   if (!admin) {
     next({ route: `${config.hostname}productos`, method: "PUT" });
   } else {

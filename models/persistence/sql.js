@@ -27,7 +27,7 @@ export default function Sql(options) {
     }
   };
 
-  this.create = (table, productos) => {
+  this.create = async (table, productos) => {
     try {
       await this.connection(table).insert(productos);
       return await this.find(table);
